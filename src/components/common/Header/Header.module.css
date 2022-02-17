@@ -1,0 +1,9 @@
+.logo {
+  @apply absolute top-0 z-50 inline-block cursor-pointer break-words;
+  flex: 1 0 auto;
+
+  @media (min-width: theme('screens.lg')) {
+    left: calc(50% - 150px);
+    width: 300px;
+  }
+}

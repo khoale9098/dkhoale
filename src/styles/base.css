@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&family=Source+Code+Pro:wght@500&family=Spartan:wght@500;600;700&display=swap');
+
+@tailwind base;
+
+:root {
+  --primary: #ffffff;
+}
+
+[data-theme='dark'] {
+  --primary: #000000;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-sans font-bold;
+  }
+}
+
+abbr[title] {
+  text-decoration: none;
+}
