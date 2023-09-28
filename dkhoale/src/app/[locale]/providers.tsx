@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import React from "react"
-import { Provider as WrapBalancerProvider } from "react-wrap-balancer"
+import { ReactNode } from 'react'
+import { Provider as WrapBalancerProvider } from 'react-wrap-balancer'
 
 interface ProviderLayoutProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export default function AppProviders({ children }: ProviderLayoutProps) {
