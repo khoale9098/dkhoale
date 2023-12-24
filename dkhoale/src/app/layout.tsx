@@ -1,12 +1,27 @@
 import './globals.css'
-import { ReactNode } from 'react'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import AppProviders from './providers'
 
-type Props = {
-  children: ReactNode
+const inter = Inter({ subsets: ['latin'] })
+
+interface RootLayoutProps {
+  children: React.ReactNode
+  params: { locale: string }
 }
 
-// Since we have a `not-found.tsx` page on the root, a layout file
-// is required, even if it's just passing children through.
-export default function RootLayout({ children }: Props) {
-  return children
+export const metadata: Metadata = {
+  title: 'Khoa Le',
+  description: 'Khoa Le',
+}
+
+export default async function RootLayout({ children }: RootLayoutProps) {
+  return (
+    <html lang="en">
+      <head />
+      <body className={inter.className}>
+        <AppProviders>{children}</AppProviders>
+      </body>
+    </html>
+  )
 }
