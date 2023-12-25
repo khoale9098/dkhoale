@@ -1,38 +1,32 @@
-'use client'
-
-import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
-import { useState } from 'react'
-import { tuskerGrotesk } from '@/assets/fonts'
-import Header from '@/components/layout/Header'
-import { cn } from '@/utils'
+import Header from '@/shared/components/layout/Header'
 
 export default function HomePage() {
-  const bottom = (
-    <div className="absolute inset-x-0 bottom-7 flex items-end justify-between px-7">
-      <div
-        className={cn(
-          'whitespace-nowrap text-[30vh] uppercase leading-none',
-          tuskerGrotesk.className
-        )}
-      >
-        <div>Frontend</div>
-        <div className="text-stroke">Engineer</div>
-      </div>
-      <div className="flex max-w-xl justify-end">
-        <p>Im the frontend engineer</p>
-      </div>
-    </div>
-  )
-
   return (
-    <div>
+    <div className="flex h-dvh flex-col">
       <Header />
-      <main className="relative z-20 h-screen">{bottom}</main>
-      <div className="absolute inset-y-0 right-0 z-0" >
-        <div style={{ background: 'url(/images/background_1.jpeg)' }} className='h-full w-full'>
-
+      <main className="relative z-20 mt-20 flex flex-col-reverse  md:flex-row">
+        <div className="relative top-16 mx-auto flex h-full  flex-1 flex-col items-start pl-7">
+          <h1 className="text-[8vh] font-bold">
+            <span>KHOA </span>
+            <span className="text-stroke">{'<LE />'}</span>
+          </h1>
+          <div className="mt-4">
+            <p>Software Engineer/ Web Developer</p>
+          </div>
+          <div className="mt-4">
+            <p>
+              Currently working full-time as a Senior Software Engineer at{' '}
+              <a href="" className="underline">
+                Agecode
+              </a>
+            </p>
+          </div>
         </div>
-        {/* <img src="" className="h-screen" alt="asd" /> */}
+        <div className="flex-1">{/* <div>1</div> */}</div>
+      </main>
+
+      <div className="fixed inset-x-0 bottom-0">
+        <img src="/images/sunflower.png" alt="" className="w-full" />
       </div>
     </div>
   )
