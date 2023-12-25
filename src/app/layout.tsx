@@ -2,7 +2,6 @@ import '@/styles/main.css'
 import '@/styles/butterfly.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
-import AppProviders from './providers'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -12,7 +11,7 @@ interface RootLayoutProps {
 }
 
 export const metadata: Metadata = {
-  title: 'Khoa Le',
+  title: 'DKhoa Le',
   description: 'Khoa Le',
 }
 
