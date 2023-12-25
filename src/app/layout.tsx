@@ -1,4 +1,5 @@
-import './globals.css'
+import '@/styles/main.css'
+import '@/styles/butterfly.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import AppProviders from './providers'
@@ -19,9 +20,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head />
-      <body className={montserrat.className}>
-        <AppProviders>{children}</AppProviders>
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   )
 }
