@@ -1,4 +1,5 @@
-import './globals.css'
+import '@/styles/main.css'
+import '@/styles/butterfly.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import AppProviders from './providers'

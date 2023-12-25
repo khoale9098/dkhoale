@@ -1,4 +1,5 @@
-import Header from '@/shared/components/layout/Header'
+import Butterfly from '@/components/Butterfly'
+import Header from '@/components/layout/Header'
 
 export default function HomePage() {
   return (
@@ -6,6 +7,8 @@ export default function HomePage() {
       <Header />
       <main className="relative z-20 mt-20 flex flex-col-reverse  md:flex-row">
         <div className="relative top-16 mx-auto flex h-full  flex-1 flex-col items-start pl-7">
+          <Butterfly />
+
           <h1 className="text-[8vh] font-bold">
             <span>KHOA </span>
             <span className="text-stroke">{'<LE />'}</span>
