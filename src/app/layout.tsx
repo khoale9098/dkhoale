@@ -20,9 +20,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head />
-      <body className={montserrat.className}>
-        <AppProviders>{children}</AppProviders>
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   )
 }
