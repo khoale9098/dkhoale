@@ -3,23 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
+  --bg-background: linear-gradient(rgb(0, 0, 0), rgb(5, 11, 22));
 }
 
 body {
-  background-image: linear-gradient(rgb(0, 0, 0), rgb(5, 11, 22));
+  background-image: var(--bg-background);
   opacity: 0.9;
   color: #f5eee6;
 }
 
-.text-stroke {
-  -webkit-text-stroke: 1px #fff;
-  -webkit-text-fill-color: transparent;
-  white-space: nowrap;
+@layer components {
+  .text-stroke {
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
 }
