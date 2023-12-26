@@ -1,5 +1,6 @@
 import '@/styles/main.css'
 import '@/styles/butterfly.css'
+import '@/styles/cloud.css'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 
