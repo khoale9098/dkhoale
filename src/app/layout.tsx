@@ -1,9 +1,11 @@
 import '@/styles/main.css'
 import '@/styles/butterfly.css'
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Inconsolata, Montserrat } from 'next/font/google'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const font = Inconsolata({
+  subsets: ['latin'],
+})
 
 interface RootLayoutProps {
   children: React.ReactNode
@@ -19,7 +21,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head />
-      <body className={montserrat.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   )
 }
