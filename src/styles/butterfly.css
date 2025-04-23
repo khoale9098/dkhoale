@@ -64,7 +64,7 @@
   position: relative;
   top: 0;
   margin: 0 auto;
-  background: url('https://assets.codepen.io/2273448/butterfly-body.png');
+  background: url('/images/butterfly-body.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -86,13 +86,13 @@
   animation-delay: 0;
 }
 .mariposa-flutter::before {
-  background-image: url('https://assets.codepen.io/2273448/butterfly-wing.png');
+  background-image: url('/images/butterfly-wing.png');
   transform-origin: 0% 50%;
   animation: flutter-r 0.3s infinite ease-out;
   left: 55%;
 }
 .mariposa-flutter::after {
-  background-image: url('https://assets.codepen.io/2273448/butterfly-wing-l.png');
+  background-image: url('/images/butterfly-wing-l.png');
   transform-origin: 100% 50%;
   animation: flutter-l 0.3s infinite ease-out;
   right: 55%;

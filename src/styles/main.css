@@ -1,11 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
+@theme {
   --bg-background: linear-gradient(rgb(0, 0, 0), rgb(5, 11, 22));
+  --color-mint-500: oklch(0.72 0.11 178);
 }
-
 body {
   background-image: var(--bg-background);
   opacity: 0.9;
