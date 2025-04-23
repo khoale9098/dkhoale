@@ -10,6 +10,7 @@ body {
   background-image: var(--bg-background);
   opacity: 0.9;
   color: #f5eee6;
+  overflow: hidden;
 }
 
 @layer components {

@@ -1,5 +1,3 @@
-import { memo } from 'react'
-
 const ButterflyMini = () => (
   <div className="mariposa">
     <div className="mariposa-turn">
@@ -8,10 +6,10 @@ const ButterflyMini = () => (
   </div>
 )
 
-export default memo(() => (
+export default () => (
   <>
     <ButterflyMini />
     <ButterflyMini />
     <ButterflyMini />
   </>
-))
+)
