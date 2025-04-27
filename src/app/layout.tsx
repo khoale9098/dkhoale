@@ -1,12 +1,11 @@
 import '@/styles/main.css'
 import '@/styles/butterfly.css'
+import 'lenis/dist/lenis.css'
 import type { Metadata } from 'next'
-import { Inconsolata } from 'next/font/google'
 import { PropsWithChildren } from 'react'
-
-const font = Inconsolata({
-  subsets: ['latin'],
-})
+import { dancingScript, inconsolataFont } from '@/configs/font'
+import { cn } from '@/utils/cn'
+import AppProviders from './providers'
 
 export const metadata: Metadata = {
   title: 'DKhoa Le',
@@ -15,9 +14,11 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" className="lenis lenis-smooth">
       <head />
-      <body className={font.className}>{children}</body>
+      <body className={cn(inconsolataFont.variable, dancingScript.variable)}>
+        <AppProviders>{children}</AppProviders>
+      </body>
     </html>
   )
 }

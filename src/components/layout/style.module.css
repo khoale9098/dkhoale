@@ -1,0 +1,32 @@
+.introLine {
+  display: flex;
+  font-size: 4rem;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: white;
+}
+
+.introLine:nth-of-type(5),
+.introLine:nth-of-type(6) {
+  display: inline-flex;
+}
+.introLine:nth-of-type(6) {
+  right: -40px;
+  position: relative;
+}
+
+.introLine p {
+  margin: 0px;
+}
+
+@media (max-width: 768px) {
+  .introLine {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .introLine {
+    font-size: 2.25rem;
+  }
+}
