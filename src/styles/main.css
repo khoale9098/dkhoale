@@ -2,19 +2,53 @@
 
 @theme {
   --bg-background: linear-gradient(rgb(0, 0, 0), rgb(5, 11, 22));
-  --color-mint-500: oklch(0.72 0.11 178);
+  --color-main: oklch(0.9559 0.0155 78.79);
+  --color-primary: oklch(85.02% 0.179 90.43);
 }
+
+@theme inline {
+  --font-sans: var(--font-sans);
+  --font-dancing: var(--font-dancing);
+}
+
 body {
+  font-family: var(--font-sans);
   background-image: var(--bg-background);
   opacity: 0.9;
-  color: #f5eee6;
-  overflow: hidden;
+  color: var(--color-main);
+}
+@layer base {
+  h2 {
+    font-family: var(--font-dancing);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    font-size: var(--text-4xl); /* 2.25rem = 36px */
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
 }
 
 @layer components {
   .text-stroke {
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--color-white);
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
   }
+  .mask {
+    mask-image: url('../../public/mask.svg');
+    mask-repeat: no-repeat;
+    background: var(--color-primary);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    color: black;
+  }
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
 }
