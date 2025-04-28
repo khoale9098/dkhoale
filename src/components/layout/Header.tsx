@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import MotionSignature from '../Signature/MotionSignature'
 
-const Header = () => (
+const Header = ({ isVisible }: { isVisible: boolean }) => (
   <header className="fixed inset-x-6 top-0 z-50 flex items-center pb-6 pt-7">
     <div className="flex items-center">
       <h1 className="font-dancing sr-only  text-primary">Khoa Le</h1>
       <div className="text-primary">
-        <MotionSignature />
+        <MotionSignature isVisible={isVisible} />
       </div>
       <div className="ml-5 uppercase">Senior Frontend Engineer</div>
     </div>

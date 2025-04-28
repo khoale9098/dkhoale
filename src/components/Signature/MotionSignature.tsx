@@ -1,9 +1,10 @@
 import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 
-const MotionSignature = () => {
+const MotionSignature = ({ isVisible }: { isVisible: boolean }) => {
   const ref = useRef(null)
-  const isVisible = useInView(ref)
+  const inView = useInView(ref)
+  const isInView = isVisible && inView
   const draw = {
     hidden: {
       opacity: 0,
@@ -32,7 +33,7 @@ const MotionSignature = () => {
         viewBox="38 1 312 210"
         width={132}
         initial="hidden"
-        animate={isVisible ? 'visible' : 'initial'}
+        animate={isInView ? 'visible' : 'initial'}
         height={60}
       >
         <motion.path
@@ -639,4 +640,5 @@ const MotionSignature = () => {
     </motion.div>
   )
 }
+
 export default MotionSignature

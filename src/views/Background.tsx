@@ -14,9 +14,10 @@ const animation = {
   }),
 }
 
-const Background = () => {
+const Background = ({ isVisible }: { isVisible: boolean }) => {
   const ref = useRef(null)
   const inView = useInView(ref)
+  const isInView = isVisible && inView
 
   const element = (
     <div className="relative z-50" ref={ref}>
@@ -30,7 +31,7 @@ const Background = () => {
         <span className="text-stroke">{'<LE />'}</span>
       </motion.div>
       <div className="mt-4 max-w-md pr-4">
-        <motion.p variants={animation} initial="initial" animate={inView ? 'enter' : ''}>
+        <motion.p variants={animation} initial="initial" animate={isInView ? 'enter' : ''}>
           I used to identify as a software engineer, but in truth, my true passion lies in the joy
           of creating. If you'd like to connect, feel free to reach out to me via{' '}
           <a href="mailto:khoale9098@gmail.com" className="underline">

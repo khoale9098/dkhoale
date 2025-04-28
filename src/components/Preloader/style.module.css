@@ -6,13 +6,14 @@
   justify-content: center;
   position: fixed;
   z-index: 99;
+
   svg {
     position: absolute;
     top: 0;
     width: 100%;
     height: calc(100% + 300px);
     path {
-      fill: #141516;
+      fill: var(--bg-background);
     }
   }
   p {

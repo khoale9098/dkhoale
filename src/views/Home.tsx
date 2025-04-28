@@ -26,8 +26,8 @@ const Home = () => {
       <AnimatePresence mode="wait">{isLoading && <Preloader />}</AnimatePresence>
       {!isLoading && (
         <>
-          <Header />
-          <Background />
+          <Header isVisible={!isLoading} />
+          <Background isVisible={!isLoading} />
           <TextSlide />
           <About />
           <Work />
