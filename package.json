@@ -30,6 +30,7 @@
     "@types/react": "19.1.2",
     "@types/react-dom": "19.1.2",
     "@types/ua-parser-js": "^0.7.39",
+    "babel-plugin-react-compiler": "19.1.0-rc.1",
     "eslint": "^8.57.1",
     "eslint-config-next": "^13.5.11",
     "eslint-config-prettier": "^8.10.0",

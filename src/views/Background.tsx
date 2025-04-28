@@ -1,25 +1,43 @@
 'use client'
 
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import Butterfly from '@/components/Butterfly'
 import { montserratFont } from '@/configs/font'
 import { cn } from '@/utils/cn'
 
+const animation = {
+  initial: { y: '120%' },
+  enter: (i: number) => ({
+    y: '0',
+    transition: { duration: 1, ease: [0.33, 1, 0.68, 1], delay: 0.075 * i },
+  }),
+}
+
 const Background = () => {
+  const ref = useRef(null)
+  const inView = useInView(ref)
+
   const element = (
-    <div className="relative z-50">
-      <div className={cn('text-[10vh] font-bold ', montserratFont.className)}>
+    <div className="relative z-50" ref={ref}>
+      <motion.div
+        variants={animation}
+        initial="initial"
+        animate={inView ? 'enter' : ''}
+        className={cn('text-[10vh] font-bold ', montserratFont.className)}
+      >
         <span>DKHOA </span>
         <span className="text-stroke">{'<LE />'}</span>
-      </div>
+      </motion.div>
       <div className="mt-4 max-w-md pr-4">
-        <p>
+        <motion.p variants={animation} initial="initial" animate={inView ? 'enter' : ''}>
           I used to identify as a software engineer, but in truth, my true passion lies in the joy
           of creating. If you'd like to connect, feel free to reach out to me via{' '}
           <a href="mailto:khoale9098@gmail.com" className="underline">
             email
           </a>
           .
-        </p>
+        </motion.p>
       </div>
     </div>
   )

@@ -4,6 +4,7 @@ const inconsolataFont = Inconsolata({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
+  weight: ['400', '500'],
 })
 
 const montserratFont = Montserrat({

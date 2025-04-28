@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Signature from '../Signature'
+// import Signature from '../Signature'
 import MotionSignature from '../Signature/MotionSignature'
 
 const Header = () => (
