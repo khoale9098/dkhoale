@@ -8,8 +8,16 @@ import { cn } from '@/utils/cn'
 import AppProviders from './providers'
 
 export const metadata: Metadata = {
-  title: 'DKhoa Le',
-  description: 'Khoa Le',
+  title: 'Khoa Le - Freelance Front End Developer',
+  description: 'Khoa Le, Independent Front End Developer based in Ho Chi Minh City',
+  openGraph: {
+    title: 'Khoa Le - Freelance Front End Developer',
+    description: 'Khoa Le, Independent Front End Developer based in Ho Chi Minh City',
+  },
+  twitter: {
+    title: 'Khoa Le - Freelance Front End Developer',
+    description: 'Khoa Le, Independent Front End Developer based in Ho Chi Minh City',
+  },
 }
 
 export default async function RootLayout({ children }: PropsWithChildren) {
