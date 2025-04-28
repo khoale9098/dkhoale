@@ -29,7 +29,6 @@ export const projects = [
     src: '/images/projects/superjoi.jpg',
     year: 2023,
     url: 'https://superjoi.com/',
-
   },
   {
     name: 'MBBank - News and Social Network',
