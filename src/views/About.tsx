@@ -18,7 +18,7 @@ const About = () => (
           </p>
         </div>
         <div className="mt-[10vh] flex gap-5">
-          <div className="pr-16">
+          <div className="pr-5 w-1/2 md:w-auto md:pr-16">
             <p className="text-white/60">SERVICES</p>
             <p className="">
               <span>WEB DESIGN</span>
